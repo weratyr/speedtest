@@ -16,6 +16,6 @@ RUN npm install
 COPY . .
 
 
-EXPOSE 80
+EXPOSE 8888
 
-ENTRYPOINT [ "node src/SpeedTest.js"
+CMD [ "node", "src/SpeedTest.js" ]
