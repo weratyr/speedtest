@@ -9,6 +9,22 @@ You can use any combinations of php and node.js backends, read more at [Wiki](ht
 
 Rename src/public/example-multipleServers-pretty.html to src/public/index.html if you want to use multiple test points mode.
 
+## Dockerfile
+
+```
+ git clone https://github.com/weratyr/speedtest.git -b node && cd speedtest
+```
+
+```
+ docker build . -t weratyr/speedtest_nodejs
+```
+
+```
+ docker run --restart always -p 80:8888 --name speedtest_nodejs  -d weratyr/speedtest_nodejs:latest
+```
+
+
+
 ## Support
 If you like this project and want to support our work you can either do pull requests or donate via [PayPal](https://paypal.me/dunklesToast) 
 
